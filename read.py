@@ -7,9 +7,13 @@ import MySQLdb
 import httplib2
 import base64
 
+from datetime import datetime as dt
+
+minute = dt.now().minute 
+
 # enable/disable database backends, use values True or False
 store_in_influx = True
-store_in_postgres = True
+store_in_postgres = (minute == 1 or minute == 16 or minute == 31 or minute == 46)
 
 # influx data submit configuration
 influx_host_port = "192.168.0.120:8086"
