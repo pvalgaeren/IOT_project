@@ -1,4 +1,4 @@
-FROM python:2
+FROM python:3
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends cron python-serial python-mysqldb
 RUN pip install crcmod
