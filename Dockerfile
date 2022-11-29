@@ -7,7 +7,7 @@ COPY read.py /
 RUN chmod 755 /read.py
 
 # For some reason, without next env var, the crcmod is not found. Weird...
-ENV PYTHONPATH /usr/local/lib/python2.7/site-packages/
+ENV PYTHONPATH /usr/local/lib/python3/site-packages/
 
 COPY jobs.txt /etc/crontab
 # lower hardlink back to 1 for cron files (cron does not allow running otherwise)
